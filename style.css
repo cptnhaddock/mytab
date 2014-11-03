@@ -1,0 +1,16 @@
+.tabs ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.tabs ul li {
+	display: inline;	
+}
+
+.tab > p {
+	display: none;
+}
+
+.tab.active > p{
+	display: block;
+}
