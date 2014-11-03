@@ -1,16 +1,43 @@
+body {
+	padding:30px;
+}
+
 .tabs ul {
 	list-style: none;
 	padding-left: 0px;
+	margin: 0px;
 }
 
 .tabs ul li {
-	display: inline;	
+	display: inline;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border: 1px solid black;
+	border-bottom: 0px;
+	padding: 5px;
+}
+
+.tabs ul li a,
+.tabs ul li a:hover,
+.tabs ul li a:visited
+ {
+	text-decoration: none;
+	color: black;
+}
+
+.tab {
+
 }
 
 .tab > p {
 	display: none;
+	padding: 5px;
+	margin-top: 5px;
 }
 
-.tab.active > p{
+.tab.active > p {
 	display: block;
+	border: 1px solid black;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
