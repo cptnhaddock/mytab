@@ -6,15 +6,20 @@ body {
 	list-style: none;
 	padding-left: 0px;
 	margin: 0px;
+	padding-bottom:4px;
+	border-bottom: 1px solid #ddd;
 }
 
 .tabs ul li {
+	margin-right: 1px;
 	display: inline;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	border: 1px solid black;
-	border-bottom: 0px;
+	border: 1px solid #ddd;
 	padding: 5px;
+	font-family:sans-serif;
+	background: white;
+	color: #08c;
 }
 
 .tabs ul li a,
@@ -22,22 +27,29 @@ body {
 .tabs ul li a:visited
  {
 	text-decoration: none;
-	color: black;
+	color: #08c;
 }
 
-.tab {
+.tabs ul li:hover {
+	background: #ddd;
+}
 
+.tabs ul li.active,
+.tabs ul li.active a {
+	color:black;
+	background:#ddd;
 }
 
 .tab > p {
 	display: none;
-	padding: 5px;
+	padding: 20px;
 	margin-top: 5px;
 }
 
 .tab.active > p {
 	display: block;
-	border: 1px solid black;
+	border: 1px solid #ddd;
+	border-top: 0px;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 }

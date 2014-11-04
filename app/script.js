@@ -2,22 +2,24 @@
 
 $(document).ready(function() {
 
-    (function () {
-        var tabs = $('.tab');
+    (function() {
+        var tabs = $('.tab, li');
 
         document.addEventListener('click', tabListener);
 
-        function tabListener (event) {
+        function tabListener(event) {
             if (event.target.nodeName !== 'A') {
                 return;
             }
 
-            tabs.each(function (){
+            tabs.each(function() {
                 $(this).removeClass('active');
             });
 
             $(event.target.hash).addClass('active');
+            console.log(event.target.parentNode);
+            $(event.target.parentNode).addClass('active');
         }
 
-    }) ();
+    })();
 });
