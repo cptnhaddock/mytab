@@ -2,6 +2,10 @@ body {
 	padding:30px;
 }
 
+.tabs {
+	width:400px;
+}
+
 .tabs ul {
 	list-style: none;
 	padding-left: 0px;
@@ -16,10 +20,11 @@ body {
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	border: 1px solid #ddd;
-	padding: 5px;
+	padding: 4px;
 	font-family:sans-serif;
 	background: white;
 	color: #08c;
+	-webkit-transition: all 0.5s ease;
 }
 
 .tabs ul li a,
@@ -32,24 +37,34 @@ body {
 
 .tabs ul li:hover {
 	background: #ddd;
+	-webkit-transition: all 0.1s;
 }
 
 .tabs ul li.active,
 .tabs ul li.active a {
 	color:black;
-	background:#ddd;
+	border-bottom: 1px solid transparent;
 }
 
 .tab > p {
 	display: none;
 	padding: 20px;
-	margin-top: 5px;
+	margin-top: 0px;
 }
 
-.tab.active > p {
-	display: block;
+.tab.active {
 	border: 1px solid #ddd;
 	border-top: 0px;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
+}
+
+.tab.active > p {
+	display: block;
+	-webkit-animation: fadein 1s; 
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
